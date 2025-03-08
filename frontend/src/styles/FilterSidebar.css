@@ -1,0 +1,129 @@
+.filter-sidebar {
+  width: 90%;
+  max-width: 250px;
+  padding: 16px;
+  border-right: 1px solid #ddd;
+  background: #ffffff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  height: 95vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Hide sidebar by default on mobile */
+}
+
+@media (min-width: 768px) {
+  .filter-sidebar {
+    display: block;
+    transform: translateX(0); /* Show sidebar on desktop */
+  }
+}
+
+.filter-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.clear-filters {
+  color: #e53e3e;
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  transition: color 0.3s ease-in-out;
+}
+
+.clear-filters:hover {
+  color: #c53030;
+  text-decoration: underline;
+}
+
+.filter-section {
+  margin-top: 20px;
+}
+
+.filter-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 4px;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.filter-label:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.filter-checkbox {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  accent-color: #ff5722;
+}
+
+.sort-select {
+  width: 100%;
+  padding: 6px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+.sort-select:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 4px rgba(255, 87, 34, 0.5);
+}
+
+.filter-list {
+  margin-top: 16px;
+}
+
+.filter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.remove-filter {
+  color: #e53e3e;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  transition: font-weight 0.2s ease-in-out;
+}
+
+.remove-filter:hover {
+  font-weight: bold;
+  color: #c53030;
+}
